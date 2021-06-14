@@ -452,7 +452,7 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata, IERC721Enumerable 
         return (retval == _ERC721_RECEIVED);
     }
 
-    function _approve(address to, uint256 tokenId) private {
+    function _approve(address to, uint256 tokenId) internal {
         _tokenApprovals[tokenId] = to;
         emit Approval(ownerOf(tokenId), to, tokenId);
     }

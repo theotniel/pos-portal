@@ -49,6 +49,7 @@ contract UChildMintableERC721 is
     // never use msg.sender directly, use _msgSender() instead
     function _msgSender()
         internal
+        virtual
         override
         view
         returns (address payable sender)
